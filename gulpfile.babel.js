@@ -35,7 +35,7 @@ gulp.task("sass", () => {
 });
 
 gulp.task('js', () => {
-    return gulp.src(['src/js/*.js'])
+    return gulp.src(['./node_modules/underscore/underscore.js','src/js/*.js'])
         .pipe(plumber({
             errorHandler: notify.onError({
                 "message": "Error: <%= error.message %>",
